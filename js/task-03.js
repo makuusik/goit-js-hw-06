@@ -14,11 +14,16 @@ const images = [
 ];
 
 const galleryList = document.querySelector(".gallery");
+galleryList.style.display = "flex";
+galleryList.style.flexWarp = "wrap";
+galleryList.style.listStyle = "none";
+galleryList.style.justifyContent = "space-between";
+galleryList.style.padding = galleryList.style.margin = "0";
 
 const galleryMarkup = images
   .map(
     (image) =>
-      `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}"></li>`
+      `<li class="gallery-item"><img src="${image.url}" width="650" alt="${image.alt}"></li>`
   )
   .join("");
 
