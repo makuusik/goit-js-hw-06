@@ -5,6 +5,8 @@ createButton.addEventListener("click", createBoxes);
 destroyButton.addEventListener("click", destroyBoxes);
 
 function createBoxes() {
+  boxesContainer.innerHTML = "";
+
   const amount = +document.querySelector("input").value;
 
   for (let i = 0; i < amount; i++) {
@@ -20,6 +22,7 @@ function createBoxes() {
 
 function destroyBoxes() {
   boxesContainer.innerHTML = "";
+  document.querySelector("input").value = "";
 }
 function getRandomHexColor() {
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
